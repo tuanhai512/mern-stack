@@ -6,16 +6,22 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "irc": "^0.5.2",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node src/backend/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon src/backend/server.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon src/backend/server.js",
+    "stop": "Taskkill /IM node.exe /F",
+    "seeder": "nodemon src/backend/utills/seeder.js"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
